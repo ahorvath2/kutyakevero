@@ -10,6 +10,8 @@ import UIKit
 
 class BackgroundSelectorViewController: UIViewController {
 
+    @IBOutlet weak var nextButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

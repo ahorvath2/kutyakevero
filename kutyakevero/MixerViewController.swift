@@ -22,8 +22,12 @@ class MixerViewController: UIViewController {
     
     @IBAction func showBackgroundSelector(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "Select background", sender: nil)
+        
     }
     
+    @IBAction func showOnboarding(_ sender: UIButton) {
+        performSegue(withIdentifier: "Show onboarding", sender: nil)
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

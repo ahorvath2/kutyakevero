@@ -33,7 +33,24 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEA-Ge-bcL">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6N3-6o-bDg"/>
+                                </constraints>
+                                <state key="normal" title="Help"/>
+                                <connections>
+                                    <action selector="showOnboarding:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ds-7i-A9x"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sEA-Ge-bcL" secondAttribute="bottom" constant="20" id="5my-hc-fVp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sEA-Ge-bcL" secondAttribute="trailing" constant="16" id="6D5-Yj-NWS"/>
+                            <constraint firstItem="sEA-Ge-bcL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VdJ-Wk-uE7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Keverő" id="4OB-jl-Ttu">
@@ -50,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-553" y="116"/>
+            <point key="canvasLocation" x="-554.39999999999998" y="115.59220389805098"/>
         </scene>
         <!--Háttér választás-->
         <scene sceneID="QHI-Nc-11f">
@@ -70,6 +87,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="nextButton" destination="7O2-UV-Ema" id="ULz-vn-2VL"/>
                         <segue destination="HgU-q9-Fy3" kind="show" identifier="Show sharing" id="UHD-Eq-oi4"/>
                     </connections>
                 </viewController>
@@ -93,20 +111,30 @@
             </objects>
             <point key="canvasLocation" x="1194" y="117"/>
         </scene>
-        <!--View Controller-->
+        <!--Onboarding View Controller-->
         <scene sceneID="1KF-Z8-V8W">
             <objects>
-                <viewController id="2LS-Mc-97m" sceneMemberID="viewController">
+                <viewController id="2LS-Mc-97m" customClass="OnboardingViewController" customModule="kutyakevero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ir3-J1-Qf2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1i-1S-E44">
+                                <rect key="frame" x="292" y="8" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="2LS-Mc-97m" eventType="touchUpInside" id="gZA-Oa-MLd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Wgw-Jp-Y1H"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeD-0b-Xg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-554" y="974"/>
+            <point key="canvasLocation" x="-554.39999999999998" y="973.76311844077964"/>
         </scene>
     </scenes>
 </document>
