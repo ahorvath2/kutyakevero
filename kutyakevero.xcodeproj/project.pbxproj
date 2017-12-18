@@ -41,6 +41,7 @@
 		020465B763D3343240B7141D /* Pods_kutyakevero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kutyakevero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09257F6E308598E675E9CA66 /* Pods-kutyakevero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kutyakevero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kutyakevero/Pods-kutyakevero.debug.xcconfig"; sourceTree = "<group>"; };
 		1A83B7BD1FE80DA800A07DE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		1A83B7C11FE81D2700A07DE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		96C0E64E12EAA1173E935896 /* Pods-kutyakevero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kutyakevero.release.xcconfig"; path = "Pods/Target Support Files/Pods-kutyakevero/Pods-kutyakevero.release.xcconfig"; sourceTree = "<group>"; };
 		985613741FE7FE6F009F1068 /* MixerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerViewController.swift; sourceTree = "<group>"; };
 		985613761FE7FEC2009F1068 /* BackgroundSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSelectorViewController.swift; sourceTree = "<group>"; };
@@ -405,6 +406,7 @@
 			children = (
 				98A7C8421FE7C5F2001A20D1 /* Base */,
 				9856138D1FE8014F009F1068 /* hu */,
+				1A83B7C11FE81D2700A07DE4 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

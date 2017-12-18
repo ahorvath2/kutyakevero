@@ -136,22 +136,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1i-1S-E44">
-                                <rect key="frame" x="292" y="8" width="73" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1i-1S-E44">
+                                <rect key="frame" x="320" y="20" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="dismiss:" destination="2LS-Mc-97m" eventType="touchUpInside" id="gZA-Oa-MLd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF6-Of-IzQ">
+                                <rect key="frame" x="20" y="40" width="335" height="607"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OF6-Of-IzQ" firstAttribute="top" secondItem="Wgw-Jp-Y1H" secondAttribute="top" constant="20" id="7sp-K0-T3X"/>
+                            <constraint firstItem="Wgw-Jp-Y1H" firstAttribute="trailing" secondItem="OF6-Of-IzQ" secondAttribute="trailing" constant="20" id="J10-nh-Cic"/>
+                            <constraint firstItem="OF6-Of-IzQ" firstAttribute="leading" secondItem="Wgw-Jp-Y1H" secondAttribute="leading" constant="20" id="NmC-Qc-3g8"/>
+                            <constraint firstItem="n1i-1S-E44" firstAttribute="top" secondItem="Wgw-Jp-Y1H" secondAttribute="top" id="TdX-Dl-mXS"/>
+                            <constraint firstItem="Wgw-Jp-Y1H" firstAttribute="trailing" secondItem="n1i-1S-E44" secondAttribute="trailing" constant="16" id="xHl-hn-XON"/>
+                            <constraint firstItem="Wgw-Jp-Y1H" firstAttribute="bottom" secondItem="OF6-Of-IzQ" secondAttribute="bottom" constant="20" id="xwb-X0-sZ0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Wgw-Jp-Y1H"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeD-0b-Xg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-590" y="972"/>
+            <point key="canvasLocation" x="-591.20000000000005" y="971.96401799100454"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="UaP-m6-J9J">

@@ -1,0 +1,30 @@
+
+/* Class = "UINavigationItem"; title = "Mixer"; ObjectID = "4OB-jl-Ttu"; */
+"4OB-jl-Ttu.title" = "Mixer";
+
+/* Class = "UIBarButtonItem"; title = "Next"; ObjectID = "7O2-UV-Ema"; */
+"7O2-UV-Ema.title" = "Next";
+
+/* Class = "UIBarButtonItem"; title = "Next"; ObjectID = "EI4-W4-9mS"; */
+"EI4-W4-9mS.title" = "Next";
+
+/* Class = "UILabel"; text = "Info"; ObjectID = "OF6-Of-IzQ"; */
+"OF6-Of-IzQ.text" = "Blend your favourite dog breeds into a mix you most like and place it in an environment of your choice!\n\nSend the picture to your friends with your greetings.";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "TNp-DP-0gm"; */
+"TNp-DP-0gm.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fOG-tS-fRp"; */
+"fOG-tS-fRp.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "n1i-1S-E44"; */
+"n1i-1S-E44.normalTitle" = "Close";
+
+/* Class = "UINavigationItem"; title = "Background"; ObjectID = "nPu-fS-dH4"; */
+"nPu-fS-dH4.title" = "Background";
+
+/* Class = "UIBarButtonItem"; title = "Help"; ObjectID = "s2a-yh-TVc"; */
+"s2a-yh-TVc.title" = "Help";
+
+/* Class = "UINavigationItem"; title = "Share"; ObjectID = "yHi-Cc-UDu"; */
+"yHi-Cc-UDu.title" = "Share";
