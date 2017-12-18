@@ -25,7 +25,7 @@ class MixerViewController: UIViewController {
         
     }
     
-    @IBAction func showOnboarding(_ sender: UIButton) {
+    @IBAction func showOnboarding(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "Show onboarding", sender: nil)
     }
     // MARK: - Navigation

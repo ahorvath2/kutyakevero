@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-1398" y="117"/>
         </scene>
-        <!--Keverő-->
+        <!--Mixer-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MixerViewController" customModule="kutyakevero" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,27 +34,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEA-Ge-bcL">
-                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="m2X-Ho-jiK">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNp-DP-0gm">
+                                        <rect key="frame" x="0.0" y="35" width="125" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kqd-9c-Ly3">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="100"/>
+                                        <connections>
+                                            <segue destination="m4u-1k-qWR" kind="embed" id="8sI-ip-iHn"/>
+                                        </connections>
+                                    </containerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOG-tS-fRp">
+                                        <rect key="frame" x="250" y="35" width="125" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="6N3-6o-bDg"/>
+                                    <constraint firstAttribute="height" constant="100" id="gf3-tQ-o5Z"/>
                                 </constraints>
-                                <state key="normal" title="Help"/>
-                                <connections>
-                                    <action selector="showOnboarding:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ds-7i-A9x"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sEA-Ge-bcL" secondAttribute="bottom" constant="20" id="5my-hc-fVp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sEA-Ge-bcL" secondAttribute="trailing" constant="16" id="6D5-Yj-NWS"/>
-                            <constraint firstItem="sEA-Ge-bcL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VdJ-Wk-uE7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="m2X-Ho-jiK" secondAttribute="bottom" id="3Uh-Qw-beH"/>
+                            <constraint firstItem="m2X-Ho-jiK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cjm-wh-VtB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m2X-Ho-jiK" secondAttribute="trailing" id="sMd-1F-9ya"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Keverő" id="4OB-jl-Ttu">
-                        <barButtonItem key="rightBarButtonItem" title="Tovább" style="done" id="EI4-W4-9mS">
+                    <navigationItem key="navigationItem" title="Mixer" id="4OB-jl-Ttu">
+                        <barButtonItem key="leftBarButtonItem" title="Help" style="plain" id="s2a-yh-TVc">
+                            <connections>
+                                <action selector="showOnboarding:" destination="BYZ-38-t0r" id="ErT-zi-hru"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="EI4-W4-9mS">
                             <connections>
                                 <action selector="showBackgroundSelector:" destination="BYZ-38-t0r" id="UaU-en-eNH"/>
                             </connections>
@@ -69,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="-554.39999999999998" y="115.59220389805098"/>
         </scene>
-        <!--Háttér választás-->
+        <!--Background-->
         <scene sceneID="QHI-Nc-11f">
             <objects>
                 <viewController id="gGM-6W-I3v" customClass="BackgroundSelectorViewController" customModule="kutyakevero" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,8 +96,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="T2c-3d-P2J"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Háttér választás" id="nPu-fS-dH4">
-                        <barButtonItem key="rightBarButtonItem" title="Tovább" style="done" id="7O2-UV-Ema">
+                    <navigationItem key="navigationItem" title="Background" id="nPu-fS-dH4">
+                        <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="7O2-UV-Ema">
                             <connections>
                                 <action selector="showSharing:" destination="gGM-6W-I3v" id="8LM-zs-b9r"/>
                             </connections>
@@ -95,7 +112,7 @@
             </objects>
             <point key="canvasLocation" x="342" y="116"/>
         </scene>
-        <!--Megosztás-->
+        <!--Share-->
         <scene sceneID="dnU-Ft-Ksq">
             <objects>
                 <viewController id="HgU-q9-Fy3" customClass="ShareViewController" customModule="kutyakevero" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,7 +122,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PSv-ZP-imQ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Megosztás" id="yHi-Cc-UDu"/>
+                    <navigationItem key="navigationItem" title="Share" id="yHi-Cc-UDu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KaB-yC-AiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,7 +151,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeD-0b-Xg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-554.39999999999998" y="973.76311844077964"/>
+            <point key="canvasLocation" x="-590" y="972"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="UaP-m6-J9J">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="m4u-1k-qWR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9T-3t-Hkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331" y="689"/>
         </scene>
     </scenes>
 </document>
