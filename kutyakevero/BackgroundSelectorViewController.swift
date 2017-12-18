@@ -21,8 +21,10 @@ class BackgroundSelectorViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
+    @IBAction func showSharing(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "Show sharing", sender: self)
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -30,6 +32,5 @@ class BackgroundSelectorViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }
