@@ -34,26 +34,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="m2X-Ho-jiK">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="m2X-Ho-jiK">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNp-DP-0gm">
-                                        <rect key="frame" x="0.0" y="35" width="125" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNp-DP-0gm">
+                                        <rect key="frame" x="0.0" y="25" width="60" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="yLw-Vp-7Gg"/>
+                                        </constraints>
+                                        <state key="normal" image="arrow-left"/>
                                     </button>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kqd-9c-Ly3">
-                                        <rect key="frame" x="125" y="0.0" width="125" height="100"/>
+                                        <rect key="frame" x="65" y="0.0" width="245" height="100"/>
                                         <connections>
                                             <segue destination="m4u-1k-qWR" kind="embed" id="8sI-ip-iHn"/>
                                         </connections>
                                     </containerView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOG-tS-fRp">
-                                        <rect key="frame" x="250" y="35" width="125" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOG-tS-fRp">
+                                        <rect key="frame" x="315" y="25" width="60" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="INL-ZI-RJp"/>
+                                        </constraints>
+                                        <state key="normal" image="arrow"/>
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Kqd-9c-Ly3" firstAttribute="leading" secondItem="TNp-DP-0gm" secondAttribute="trailing" constant="5" id="CPG-7q-hZ8"/>
                                     <constraint firstAttribute="height" constant="100" id="gf3-tQ-o5Z"/>
+                                    <constraint firstItem="Kqd-9c-Ly3" firstAttribute="top" secondItem="m2X-Ho-jiK" secondAttribute="top" id="zIv-1d-0b7"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -166,13 +174,17 @@
             </objects>
             <point key="canvasLocation" x="-591.20000000000005" y="971.96401799100454"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Piece Page View Controller-->
         <scene sceneID="UaP-m6-J9J">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="m4u-1k-qWR" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="m4u-1k-qWR" customClass="PiecePageViewController" customModule="kutyakevero" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9T-3t-Hkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="331" y="689"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow" width="50" height="50"/>
+        <image name="arrow-left" width="50" height="50"/>
+    </resources>
 </document>
