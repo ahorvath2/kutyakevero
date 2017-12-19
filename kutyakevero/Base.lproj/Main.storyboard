@@ -206,15 +206,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF6-Of-IzQ">
-                                <rect key="frame" x="20" y="40" width="728" height="964"/>
+                                <rect key="frame" x="20" y="120" width="728" height="884"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Cya-Ms-NkE">
+                                <rect key="frame" x="264" y="140" width="240" height="282"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xE-se-TtT">
+                                <rect key="frame" x="305" y="837" width="159" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Let's start"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="OF6-Of-IzQ" firstAttribute="top" secondItem="Wgw-Jp-Y1H" secondAttribute="top" constant="20" id="7sp-K0-T3X"/>
+                            <constraint firstItem="OF6-Of-IzQ" firstAttribute="top" secondItem="Wgw-Jp-Y1H" secondAttribute="top" constant="100" id="7sp-K0-T3X"/>
                             <constraint firstItem="Wgw-Jp-Y1H" firstAttribute="trailing" secondItem="OF6-Of-IzQ" secondAttribute="trailing" constant="20" id="J10-nh-Cic"/>
                             <constraint firstItem="OF6-Of-IzQ" firstAttribute="leading" secondItem="Wgw-Jp-Y1H" secondAttribute="leading" constant="20" id="NmC-Qc-3g8"/>
                             <constraint firstItem="n1i-1S-E44" firstAttribute="top" secondItem="Wgw-Jp-Y1H" secondAttribute="top" id="TdX-Dl-mXS"/>
@@ -226,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeD-0b-Xg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-591.20000000000005" y="971.96401799100454"/>
+            <point key="canvasLocation" x="-591.40625" y="971.48437499999989"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="UaP-m6-J9J">
@@ -237,4 +247,7 @@
             <point key="canvasLocation" x="331" y="689"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="945" height="945"/>
+    </resources>
 </document>
