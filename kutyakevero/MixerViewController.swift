@@ -9,15 +9,16 @@ import UIKit
 
 class MixerViewController: UIViewController {
 
+    var selectedPiece: Int = 0
+    var pager: PiecePageViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func showBackgroundSelector(_ sender: UIBarButtonItem) {
@@ -28,12 +29,28 @@ class MixerViewController: UIViewController {
     @IBAction func showOnboarding(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "Show onboarding", sender: nil)
     }
+    
+    @IBAction func selectPiece(_ sender: UISegmentedControl) {
+        guard let bodyPiece = BodyPiece(rawValue: sender.selectedSegmentIndex) else { return }
+        pager?.bodyPiece = bodyPiece
+    }
+    
+    @IBAction func showNextItem(_ sender: UIButton) {
+        pager?.showNextItem()
+    }
+    
+    @IBAction func showPreviousItem(_ sender: UIButton) {
+        pager?.showPreviousItem()
+    }
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "Embedded pager" {
+            pager = segue.destination as? PiecePageViewController
+        } else {
+            super.prepare(for: segue, sender: sender)
+        }
     }
-
 }

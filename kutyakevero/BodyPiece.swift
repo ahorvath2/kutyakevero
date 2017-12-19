@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum BodyPiece {
-    case ear
+enum BodyPiece: Int {
+    case ear = 0
     case mouth
     case eye
     case head

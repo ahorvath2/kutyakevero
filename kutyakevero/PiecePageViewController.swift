@@ -7,24 +7,43 @@
 
 import UIKit
 
-class PiecePageViewController: UIPageViewController, UIPageViewControllerDataSource {
+class PiecePageViewController: UIPageViewController {
     
-    var bodyPiece: BodyPiece = .eye {
+    var bodyPiece: BodyPiece = .ear {
         didSet {
             updatePages()
         }
     }
+    private var presentedIndex = 0
     private var pageViewControllers: [UIViewController] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
+        self.delegate = self
         self.updatePages()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
+    }
+    
+    func showNextItem() {
+        if presentedIndex < pageViewControllers.count - 2 {
+            presentedIndex += 1
+        } else {
+            presentedIndex = 0
+        }
+        setViewControllers([pageViewControllers[presentedIndex]], direction: .forward, animated: true)
+    }
+    
+    func showPreviousItem() {
+        if presentedIndex > 0 {
+            presentedIndex -= 1
+        } else {
+            presentedIndex = pageViewControllers.count - 1
+        }
+        setViewControllers([pageViewControllers[presentedIndex]], direction: .reverse, animated: true)
     }
     
     private func updatePages() {
@@ -40,8 +59,20 @@ class PiecePageViewController: UIPageViewController, UIPageViewControllerDataSou
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
     }
+}
+
+// MARK: - UIPageViewControllerDelegate
+extension PiecePageViewController: UIPageViewControllerDelegate {
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        guard let viewController = viewControllers?.first, let index = pageViewControllers.index(of: viewController) else { return }
+        presentedIndex = index
+    }
+
+}
+
+// MARK: - UIPageViewControllerDataSource
+extension PiecePageViewController: UIPageViewControllerDataSource {
     
-    // MARK: - UIPageViewControllerDataSource
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let presentedIndex = pageViewControllers.index(of: viewController) else { return nil }
         if presentedIndex == 0 {
@@ -58,17 +89,5 @@ class PiecePageViewController: UIPageViewController, UIPageViewControllerDataSou
         return pageViewControllers[presentedIndex + 1]
     }
     
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return pageViewControllers.count
-    }
     
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        guard let firstViewController = viewControllers?.first,
-            let firstViewControllerIndex = pageViewControllers.index(of: firstViewController) else {
-                return 0
-        }
-        
-        return firstViewControllerIndex
-    }
-
 }
