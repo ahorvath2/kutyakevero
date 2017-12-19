@@ -16,7 +16,6 @@
 		986DE49F1FE82799004DB288 /* PieceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DE49D1FE82799004DB288 /* PieceViewController.swift */; };
 		986DE4A01FE82799004DB288 /* PieceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 986DE49E1FE82799004DB288 /* PieceViewController.xib */; };
 		986DE4A21FE83338004DB288 /* BodyPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DE4A11FE83338004DB288 /* BodyPiece.swift */; };
-		986DE4A41FE83386004DB288 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DE4A31FE83386004DB288 /* Body.swift */; };
 		98A7C83E1FE7C5F2001A20D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A7C83D1FE7C5F2001A20D1 /* AppDelegate.swift */; };
 		98A7C8431FE7C5F2001A20D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A7C8411FE7C5F2001A20D1 /* Main.storyboard */; };
 		98A7C8451FE7C5F2001A20D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98A7C8441FE7C5F2001A20D1 /* Assets.xcassets */; };
@@ -59,7 +58,6 @@
 		986DE49D1FE82799004DB288 /* PieceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceViewController.swift; sourceTree = "<group>"; };
 		986DE49E1FE82799004DB288 /* PieceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PieceViewController.xib; sourceTree = "<group>"; };
 		986DE4A11FE83338004DB288 /* BodyPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPiece.swift; sourceTree = "<group>"; };
-		986DE4A31FE83386004DB288 /* Body.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body.swift; sourceTree = "<group>"; };
 		98A7C83A1FE7C5F2001A20D1 /* kutyakevero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kutyakevero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A7C83D1FE7C5F2001A20D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98A7C8421FE7C5F2001A20D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 				986DE49D1FE82799004DB288 /* PieceViewController.swift */,
 				986DE49E1FE82799004DB288 /* PieceViewController.xib */,
 				986DE4A11FE83338004DB288 /* BodyPiece.swift */,
-				986DE4A31FE83386004DB288 /* Body.swift */,
 			);
 			path = kutyakevero;
 			sourceTree = "<group>";
@@ -378,7 +375,6 @@
 				98A7C8851FE7FCA6001A20D1 /* MainNavigationController.swift in Sources */,
 				98A7C8871FE7FCD2001A20D1 /* OnboardingViewController.swift in Sources */,
 				98A7C83E1FE7C5F2001A20D1 /* AppDelegate.swift in Sources */,
-				986DE4A41FE83386004DB288 /* Body.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

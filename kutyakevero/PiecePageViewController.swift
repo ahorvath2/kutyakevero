@@ -3,7 +3,6 @@
 //  kutyakevero
 //
 //  Created by Adam Horvath on 2017. 12. 18..
-//  Copyright © 2017. Adam Horvath. All rights reserved.
 //
 
 import UIKit
@@ -33,7 +32,7 @@ class PiecePageViewController: UIPageViewController, UIPageViewControllerDataSou
         var viewControllers:  [UIViewController] = []
         for image in images {
             let pieceViewController = PieceViewController()
-            pieceViewController.image = UIImage(named: image)
+            pieceViewController.image = UIImage(named: image + "_thumb")
             viewControllers.append(pieceViewController)
         }
         self.pageViewControllers = viewControllers

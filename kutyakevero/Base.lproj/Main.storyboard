@@ -64,10 +64,26 @@
                                     <constraint firstItem="Kqd-9c-Ly3" firstAttribute="top" secondItem="m2X-Ho-jiK" secondAttribute="top" id="zIv-1d-0b7"/>
                                 </constraints>
                             </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="a8W-Me-Qii">
+                                <rect key="frame" x="16" y="530" width="343" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="aXy-bZ-yCG"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="ear"/>
+                                    <segment title="mouth"/>
+                                    <segment title="eye"/>
+                                    <segment title="head"/>
+                                    <segment title="body"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="m2X-Ho-jiK" secondAttribute="bottom" id="3Uh-Qw-beH"/>
+                            <constraint firstItem="m2X-Ho-jiK" firstAttribute="top" secondItem="a8W-Me-Qii" secondAttribute="bottom" constant="10" id="59u-6Y-Uv4"/>
+                            <constraint firstItem="a8W-Me-Qii" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8VO-NF-fd6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a8W-Me-Qii" secondAttribute="trailing" constant="16" id="92D-3G-6wy"/>
                             <constraint firstItem="m2X-Ho-jiK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cjm-wh-VtB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m2X-Ho-jiK" secondAttribute="trailing" id="sMd-1F-9ya"/>
                         </constraints>
