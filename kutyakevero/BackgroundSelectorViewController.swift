@@ -7,13 +7,6 @@
 
 import UIKit
 
-typealias Point = (Int, Int)
-struct BackgroundItem {
-    let imageName: String
-    let dogTranslate: Point
-    let dogScale: Double
-    let dogRotation: Double
-}
 
 class BackgroundSelectorViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {    
 
@@ -42,6 +35,7 @@ class BackgroundSelectorViewController: UIViewController, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let shareViewController = storyboard?.instantiateViewController(withIdentifier: "Share") as! ShareViewController
+        shareViewController.backgroundItem = backgrounds[indexPath.item]
         navigationController?.pushViewController(shareViewController, animated: true)
     }
     

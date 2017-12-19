@@ -9,10 +9,21 @@ import UIKit
 
 class ShareViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var backgroundItem = BackgroundItem(imageName: "background1", dogTranslate: (0, 0), dogScale: 1, dogRotation: 0) {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    private func updateUI() {
+        imageView?.image = UIImage(named: backgroundItem.imageName)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateUI()
     }
 
     override func didReceiveMemoryWarning() {

@@ -167,14 +167,28 @@
                     <view key="view" contentMode="scaleToFill" id="Hdy-gS-WDJ">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zA0-g7-I41">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zA0-g7-I41" firstAttribute="top" secondItem="PSv-ZP-imQ" secondAttribute="top" id="FRe-B0-tfu"/>
+                            <constraint firstItem="zA0-g7-I41" firstAttribute="bottom" secondItem="PSv-ZP-imQ" secondAttribute="bottom" id="a26-sb-OZ3"/>
+                            <constraint firstItem="zA0-g7-I41" firstAttribute="trailing" secondItem="PSv-ZP-imQ" secondAttribute="trailing" id="cRr-o6-1gY"/>
+                            <constraint firstItem="zA0-g7-I41" firstAttribute="leading" secondItem="PSv-ZP-imQ" secondAttribute="leading" id="s0U-v0-Id0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PSv-ZP-imQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Share" id="yHi-Cc-UDu"/>
+                    <connections>
+                        <outlet property="imageView" destination="zA0-g7-I41" id="3mJ-GW-JCX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KaB-yC-AiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1194" y="117"/>
+            <point key="canvasLocation" x="1193.75" y="116.60156249999999"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="1KF-Z8-V8W">
