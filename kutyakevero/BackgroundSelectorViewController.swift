@@ -40,6 +40,11 @@ class BackgroundSelectorViewController: UIViewController, UICollectionViewDelega
         return backgrounds.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let shareViewController = storyboard?.instantiateViewController(withIdentifier: "Share") as! ShareViewController
+        navigationController?.pushViewController(shareViewController, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCollectionViewCell", for: indexPath) as! PhotoCellCollectionViewCell
         cell.imageView.image = UIImage(named: backgrounds[indexPath.item].imageName)
