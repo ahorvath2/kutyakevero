@@ -36,7 +36,7 @@ enum BodyPiece: Int {
         retVal[.mouth] = BodyPiece.mouth.getImages().randomElement()!
         retVal[.eye] = BodyPiece.eye.getImages().randomElement()!
         retVal[.head] = BodyPiece.head.getImages().randomElement()!
-        retVal[.body] = BodyPiece.head.getImages().randomElement()!
+        retVal[.body] = BodyPiece.body.getImages().randomElement()!
         
         return retVal
     }
