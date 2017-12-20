@@ -46,6 +46,14 @@ class PiecePageViewController: UIPageViewController {
         setViewControllers([pageViewControllers[presentedIndex]], direction: .reverse, animated: true)
     }
     
+    func showItem(at index: Int) {
+        if index >= pageViewControllers.count {
+            return
+        }
+        presentedIndex = index
+        setViewControllers([pageViewControllers[presentedIndex]], direction: .forward, animated: false)
+    }
+    
     private func updatePages() {
         let images = bodyPiece.getImages()
         var viewControllers:  [UIViewController] = []

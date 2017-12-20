@@ -34,6 +34,6 @@ class ShareViewController: UIViewController {
     }
     
     @IBAction func selectBackgroundImage(from segue: UIStoryboardSegue) {
-        
+        updateUI()
     }
 }

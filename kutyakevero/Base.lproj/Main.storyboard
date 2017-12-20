@@ -87,6 +87,20 @@
                                     <action selector="selectPiece:" destination="BYZ-38-t0r" eventType="valueChanged" id="HTc-yK-fzp"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRB-8x-B2Z">
+                                <rect key="frame" x="174" y="581" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="MIX!"/>
+                                <connections>
+                                    <action selector="mix:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PhL-gR-bPU"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tns-CZ-fa8">
+                                <rect key="frame" x="0.0" y="64" width="414" height="421"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -117,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-554.39999999999998" y="115.59220389805098"/>
+            <point key="canvasLocation" x="-555.07246376811599" y="114.94565217391305"/>
         </scene>
         <!--Background-->
         <scene sceneID="QHI-Nc-11f">
@@ -232,13 +246,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1i-1S-E44">
-                                <rect key="frame" x="359" y="20" width="39" height="30"/>
-                                <state key="normal" title="Close"/>
-                                <connections>
-                                    <action selector="dismiss:" destination="2LS-Mc-97m" eventType="touchUpInside" id="gZA-Oa-MLd"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF6-Of-IzQ">
                                 <rect key="frame" x="20" y="120" width="374" height="596"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
@@ -269,9 +276,7 @@
                             <constraint firstItem="OF6-Of-IzQ" firstAttribute="leading" secondItem="Wgw-Jp-Y1H" secondAttribute="leading" constant="20" id="NmC-Qc-3g8"/>
                             <constraint firstItem="Cya-Ms-NkE" firstAttribute="centerX" secondItem="ir3-J1-Qf2" secondAttribute="centerX" id="ODt-tm-Ap9"/>
                             <constraint firstItem="Wgw-Jp-Y1H" firstAttribute="bottom" secondItem="6xE-se-TtT" secondAttribute="bottom" constant="40" id="QN3-G9-bvu"/>
-                            <constraint firstItem="n1i-1S-E44" firstAttribute="top" secondItem="Wgw-Jp-Y1H" secondAttribute="top" id="TdX-Dl-mXS"/>
                             <constraint firstItem="Cya-Ms-NkE" firstAttribute="top" secondItem="Wgw-Jp-Y1H" secondAttribute="top" constant="40" id="p7V-8c-LvR"/>
-                            <constraint firstItem="Wgw-Jp-Y1H" firstAttribute="trailing" secondItem="n1i-1S-E44" secondAttribute="trailing" constant="16" id="xHl-hn-XON"/>
                             <constraint firstItem="Wgw-Jp-Y1H" firstAttribute="bottom" secondItem="OF6-Of-IzQ" secondAttribute="bottom" constant="20" id="xwb-X0-sZ0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wgw-Jp-Y1H"/>

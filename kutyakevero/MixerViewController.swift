@@ -7,9 +7,8 @@
 
 import UIKit
 
-class MixerViewController: UIViewController {
-
-    var pager: PiecePageViewController?
+class MixerViewController: UIViewController {    
+    var pager: PiecePageViewController!
     let model = Model()
     
     override func viewDidLoad() {
@@ -27,15 +26,20 @@ class MixerViewController: UIViewController {
     
     @IBAction func selectPiece(_ sender: UISegmentedControl) {
         guard let bodyPiece = BodyPiece(rawValue: sender.selectedSegmentIndex) else { return }
-        pager?.bodyPiece = bodyPiece
+        pager.bodyPiece = bodyPiece
     }
     
     @IBAction func showNextItem(_ sender: UIButton) {
-        pager?.showNextItem()
+        pager.showNextItem()
     }
     
     @IBAction func showPreviousItem(_ sender: UIButton) {
-        pager?.showPreviousItem()
+        pager.showPreviousItem()
+    }
+    
+    @IBAction func mix(_ sender: UIButton) {
+        let randomDog = Model.getRandomDog()
+        pager.showItem(at: randomDog[pager.bodyPiece]!)
     }
     
     // MARK: - Navigation
