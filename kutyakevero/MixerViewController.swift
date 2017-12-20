@@ -38,6 +38,10 @@ class MixerViewController: UIViewController {
         pager?.showPreviousItem()
     }
     
+    @IBAction func selectBackgroundImage(from segue: UIStoryboardSegue) {
+        
+    }
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation

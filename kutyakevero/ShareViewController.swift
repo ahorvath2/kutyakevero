@@ -24,8 +24,10 @@ class ShareViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Select background" {
-            guard let backgroundSelector = segue.destination as? BackgroundSelectorViewController else { return }
-            backgroundSelector.model = model
+            if let navigationController = segue.destination as? UINavigationController {
+                guard let backgroundSelector = navigationController.childViewControllers.first as? BackgroundSelectorViewController else { return }
+                backgroundSelector.model = model
+            }
         } else {
             super.prepare(for: segue, sender: sender)
         }
