@@ -23,16 +23,5 @@ class Model {
         return backgrounds[0]
     }()
     
-    var dog:[BodyPiece : Int]?
-    
-    static func getRandomDog() -> [BodyPiece : Int] {
-        var retVal = [BodyPiece : Int]()
-        retVal[.ear] = BodyPiece.ear.getImages().randomIndex()!
-        retVal[.mouth] = BodyPiece.mouth.getImages().randomIndex()!
-        retVal[.eye] = BodyPiece.eye.getImages().randomIndex()!
-        retVal[.head] = BodyPiece.head.getImages().randomIndex()!
-        retVal[.body] = BodyPiece.head.getImages().randomIndex()!
-        
-        return retVal
-    }
+    var dog:[BodyPiece : (String, Int)]?
 }

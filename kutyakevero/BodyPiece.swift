@@ -28,5 +28,17 @@ enum BodyPiece: Int {
             return ["body1", "body2", "body3", "body4", "body5", "body6", "body7", "body8", "body9", "body10"]
         }
     }
+    
+    static func getRandomPieces() -> [BodyPiece : (String, Int)] {
+        var retVal = [BodyPiece : (String, Int)]()
+        
+        retVal[.ear] = BodyPiece.ear.getImages().randomElement()!
+        retVal[.mouth] = BodyPiece.mouth.getImages().randomElement()!
+        retVal[.eye] = BodyPiece.eye.getImages().randomElement()!
+        retVal[.head] = BodyPiece.head.getImages().randomElement()!
+        retVal[.body] = BodyPiece.head.getImages().randomElement()!
+        
+        return retVal
+    }
 }
 

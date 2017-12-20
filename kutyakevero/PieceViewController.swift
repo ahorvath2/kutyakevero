@@ -9,7 +9,7 @@ import UIKit
 
 class PieceViewController: UIViewController {
 
-    var image: UIImage? = UIImage(named:"logo") {
+    var image: UIImage? {
         didSet {
             imageView?.image = image
         }

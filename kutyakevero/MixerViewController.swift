@@ -11,6 +11,12 @@ class MixerViewController: UIViewController {
     var pager: PiecePageViewController!
     let model = Model()
     
+    @IBOutlet weak var earImageView: UIImageView!
+    @IBOutlet weak var bodyImageView: UIImageView!
+    @IBOutlet weak var headImageView: UIImageView!
+    @IBOutlet weak var mouthImageView: UIImageView!
+    @IBOutlet weak var eyeImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,8 +44,16 @@ class MixerViewController: UIViewController {
     }
     
     @IBAction func mix(_ sender: UIButton) {
-        let randomDog = Model.getRandomDog()
-        pager.showItem(at: randomDog[pager.bodyPiece]!)
+        let randomDog = BodyPiece.getRandomPieces()
+        model.dog = randomDog
+        
+        earImageView.image = UIImage(named: randomDog[.ear]!.0)
+        mouthImageView.image = UIImage(named: randomDog[.mouth]!.0)
+        headImageView.image = UIImage(named: randomDog[.head]!.0)
+        bodyImageView.image = UIImage(named: randomDog[.body]!.0)
+        eyeImageView.image = UIImage(named: randomDog[.eye]!.0)
+        
+        pager.showItem(at: randomDog[pager.bodyPiece]!.1)
     }
     
     // MARK: - Navigation
@@ -48,7 +62,7 @@ class MixerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Embedded pager" {
             pager = segue.destination as? PiecePageViewController
-        } else if (segue.identifier == "Show sharing"){
+        } else if (segue.identifier == "Show sharing") {
             guard let sharingViewController = segue.destination as? ShareViewController else { return }
             sharingViewController.model = model
         } else {
