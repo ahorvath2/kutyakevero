@@ -178,7 +178,7 @@
                     <navigationItem key="navigationItem" title="Background" id="nPu-fS-dH4">
                         <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="7TZ-Qq-GRf">
                             <connections>
-                                <segue destination="Mee-Lo-Beq" kind="unwind" identifier="Select background image" unwindAction="selectBackgroundImageFrom:" id="V3X-B6-oU0"/>
+                                <segue destination="Mee-Lo-Beq" kind="unwind" identifier="Select background image" unwindAction="selectBackgroundImageFrom:" id="Qc8-B6-zPY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

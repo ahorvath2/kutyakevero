@@ -32,4 +32,8 @@ class ShareViewController: UIViewController {
             super.prepare(for: segue, sender: sender)
         }
     }
+    
+    @IBAction func selectBackgroundImage(from segue: UIStoryboardSegue) {
+        
+    }
 }
