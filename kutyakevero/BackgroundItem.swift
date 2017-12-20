@@ -5,12 +5,11 @@
 //  Created by Peter Adam Korodi on 2017. 12. 19..
 //
 
-import Foundation
+import UIKit
 
-typealias Point = (Int, Int)
 struct BackgroundItem {
-    let imageName: String
-    let dogTranslate: Point
+    let image: UIImage
+    let dogTranslate: CGPoint
     let dogScale: Double
     let dogRotation: Double
 }

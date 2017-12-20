@@ -10,6 +10,7 @@
 		1A83B7C31FE856CF00A07DE4 /* PhotoCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A83B7C21FE856CF00A07DE4 /* PhotoCellCollectionViewCell.swift */; };
 		1ACC827C1FE9254F008EF358 /* BackgroundItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC827B1FE9254E008EF358 /* BackgroundItem.swift */; };
 		2237D5A3EDB1BA00129DCD46 /* Pods_kutyakevero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020465B763D3343240B7141D /* Pods_kutyakevero.framework */; };
+		981161021FE972C7001B847E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981161011FE972C7001B847E /* Model.swift */; };
 		985613751FE7FE6F009F1068 /* MixerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985613741FE7FE6F009F1068 /* MixerViewController.swift */; };
 		985613771FE7FEC2009F1068 /* BackgroundSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985613761FE7FEC2009F1068 /* BackgroundSelectorViewController.swift */; };
 		985613791FE7FF82009F1068 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985613781FE7FF82009F1068 /* ShareViewController.swift */; };
@@ -51,6 +52,7 @@
 		1A83B7C21FE856CF00A07DE4 /* PhotoCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		1ACC827B1FE9254E008EF358 /* BackgroundItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundItem.swift; sourceTree = "<group>"; };
 		96C0E64E12EAA1173E935896 /* Pods-kutyakevero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kutyakevero.release.xcconfig"; path = "Pods/Target Support Files/Pods-kutyakevero/Pods-kutyakevero.release.xcconfig"; sourceTree = "<group>"; };
+		981161011FE972C7001B847E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		985613741FE7FE6F009F1068 /* MixerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerViewController.swift; sourceTree = "<group>"; };
 		985613761FE7FEC2009F1068 /* BackgroundSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSelectorViewController.swift; sourceTree = "<group>"; };
 		985613781FE7FF82009F1068 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				986DE49E1FE82799004DB288 /* PieceViewController.xib */,
 				986DE4A11FE83338004DB288 /* BodyPiece.swift */,
 				1ACC827B1FE9254E008EF358 /* BackgroundItem.swift */,
+				981161011FE972C7001B847E /* Model.swift */,
 			);
 			path = kutyakevero;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				986DE4891FE8247E004DB288 /* PiecePageViewController.swift in Sources */,
 				986DE49F1FE82799004DB288 /* PieceViewController.swift in Sources */,
 				986DE4A21FE83338004DB288 /* BodyPiece.swift in Sources */,
+				981161021FE972C7001B847E /* Model.swift in Sources */,
 				985613791FE7FF82009F1068 /* ShareViewController.swift in Sources */,
 				985613751FE7FE6F009F1068 /* MixerViewController.swift in Sources */,
 				1ACC827C1FE9254F008EF358 /* BackgroundItem.swift in Sources */,

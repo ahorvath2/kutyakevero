@@ -11,14 +11,10 @@ class ShareViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
-    var backgroundItem = BackgroundItem(imageName: "background1", dogTranslate: (0, 0), dogScale: 1, dogRotation: 0) {
-        didSet {
-            updateUI()
-        }
-    }
+    var model: Model!
     
     private func updateUI() {
-        imageView?.image = UIImage(named: backgroundItem.imageName)
+        imageView?.image = model.selectedBackground.image
     }
     
     override func viewDidLoad() {
@@ -26,20 +22,12 @@ class ShareViewController: UIViewController {
         updateUI()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "Select background" {
+            guard let backgroundSelector = segue.destination as? BackgroundSelectorViewController else { return }
+            backgroundSelector.model = model
+        } else {
+            super.prepare(for: segue, sender: sender)
+        }
     }
-    */
-
 }

@@ -9,8 +9,8 @@ import UIKit
 
 class MixerViewController: UIViewController {
 
-    var selectedPiece: Int = 0
     var pager: PiecePageViewController?
+    let model = Model()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +19,6 @@ class MixerViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    @IBAction func showBackgroundSelector(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "Select background", sender: nil)
-        
     }
     
     @IBAction func showOnboarding(_ sender: UIBarButtonItem) {
@@ -49,6 +44,9 @@ class MixerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Embedded pager" {
             pager = segue.destination as? PiecePageViewController
+        } else if (segue.identifier == "Show sharing"){
+            guard let sharingViewController = segue.destination as? ShareViewController else { return }
+            sharingViewController.model = model
         } else {
             super.prepare(for: segue, sender: sender)
         }

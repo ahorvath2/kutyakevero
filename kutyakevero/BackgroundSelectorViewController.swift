@@ -13,15 +13,7 @@ class BackgroundSelectorViewController: UIViewController, UICollectionViewDelega
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nextButton: UIBarButtonItem!
     
-    private var backgrounds: [BackgroundItem] = [
-        BackgroundItem(imageName: "background1", dogTranslate: (0, 0), dogScale: 1, dogRotation: 0),
-        BackgroundItem(imageName: "background4", dogTranslate: (0, 0), dogScale: 1, dogRotation: 0),
-        BackgroundItem(imageName: "background5", dogTranslate: (0, 0), dogScale: 1, dogRotation: 0),
-        BackgroundItem(imageName: "background6", dogTranslate: (0, 0), dogScale: 1, dogRotation: 0),
-        BackgroundItem(imageName: "background7", dogTranslate: (0, 0), dogScale: 1, dogRotation: 0),
-        BackgroundItem(imageName: "background8", dogTranslate: (0, 0), dogScale: 1, dogRotation: 0),
-        BackgroundItem(imageName: "background9", dogTranslate: (0, 0), dogScale: 1, dogRotation: 0),
-    ]
+    var model: Model!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,24 +22,18 @@ class BackgroundSelectorViewController: UIViewController, UICollectionViewDelega
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return backgrounds.count
+        return model.backgrounds.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let shareViewController = storyboard?.instantiateViewController(withIdentifier: "Share") as! ShareViewController
-        shareViewController.backgroundItem = backgrounds[indexPath.item]
-        navigationController?.pushViewController(shareViewController, animated: true)
+        model.selectedBackground = model.backgrounds[indexPath.item]
+        performSegue(withIdentifier: "Show sharing", sender: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCollectionViewCell", for: indexPath) as! PhotoCellCollectionViewCell
-        cell.imageView.image = UIImage(named: backgrounds[indexPath.item].imageName)
+        cell.imageView.image = model.backgrounds[indexPath.item].image
         return cell
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func showSharing(_ sender: UIBarButtonItem) {
@@ -58,8 +44,10 @@ class BackgroundSelectorViewController: UIViewController, UICollectionViewDelega
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "Show sharing" {
+            let shareViewController = segue.destination as! ShareViewController
+            shareViewController.model = model
+        }
     }
 
 }
