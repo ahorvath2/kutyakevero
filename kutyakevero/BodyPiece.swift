@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum BodyPiece: Int {
     case ear = 0
@@ -39,6 +40,35 @@ enum BodyPiece: Int {
         retVal[.body] = BodyPiece.body.getImages().randomElement()!
         
         return retVal
+    }
+    
+    static func combineImage(pieces: [BodyPiece : (String, Int)]) -> UIImage? {
+        let images = [UIImage(named: (pieces[.body]!.0)),
+                      UIImage(named: (pieces[.head]!.0)),
+                      UIImage(named: (pieces[.eye]!.0)),
+                      UIImage(named: (pieces[.mouth]!.0)),
+                      UIImage(named: (pieces[.ear]!.0))]
+
+        var contextSize = CGSize.zero
+        for image in images {
+            if let image = image {
+                contextSize.width = max(contextSize.width, image.size.width)
+                contextSize.height = max(contextSize.height, image.size.height)
+            }
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(contextSize, false, 0.0)
+        
+        for image in images {
+            if let image = image {
+                image.draw(in: CGRect(x: 0, y: 0, width: image.size.width,  height: image.size.height))
+            }
+        }
+        let combinedImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        return combinedImage
     }
 }
 

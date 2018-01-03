@@ -275,6 +275,10 @@
                                     <segue destination="1sF-vN-mcq" kind="presentation" identifier="Select background" id="ywt-OC-cWE"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sk7-x2-3dk">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -289,6 +293,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Share" id="yHi-Cc-UDu"/>
                     <connections>
+                        <outlet property="dogImageView" destination="sk7-x2-3dk" id="WAA-hP-V3v"/>
                         <outlet property="imageView" destination="zA0-g7-I41" id="3mJ-GW-JCX"/>
                     </connections>
                 </viewController>

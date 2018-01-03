@@ -10,11 +10,13 @@ import UIKit
 class ShareViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var dogImageView: UIImageView!
     
     var model: Model!
     
     private func updateUI() {
         imageView?.image = model.selectedBackground.image
+        dogImageView?.image = BodyPiece.combineImage(pieces: model.dog)
     }
     
     override func viewDidLoad() {

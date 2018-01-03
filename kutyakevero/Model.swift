@@ -23,5 +23,11 @@ class Model {
         return backgrounds[0]
     }()
     
-    var dog:[BodyPiece : (String, Int)]?
+    var dog:[BodyPiece : (String, Int)] = [
+        .ear:("ear1", 0),
+        .mouth:("mouth1", 0),
+        .eye:("eye1", 0),
+        .head:("head1", 0),
+        .body:("body1", 0)
+    ]
 }
