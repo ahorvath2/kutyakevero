@@ -265,13 +265,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zA0-g7-I41">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zA0-g7-I41">
                                 <rect key="frame" x="0.0" y="64" width="320" height="306"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7x-22-xED">
-                                <rect key="frame" x="68" y="460" width="185" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7x-22-xED">
+                                <rect key="frame" x="90.5" y="460" width="139" height="30"/>
                                 <state key="normal" title="Change background"/>
                                 <connections>
                                     <segue destination="1sF-vN-mcq" kind="presentation" identifier="Select background" id="ywt-OC-cWE"/>
@@ -279,6 +277,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zA0-g7-I41" firstAttribute="leading" secondItem="PSv-ZP-imQ" secondAttribute="leading" id="Igh-Y4-dNs"/>
+                            <constraint firstItem="zA0-g7-I41" firstAttribute="top" secondItem="PSv-ZP-imQ" secondAttribute="top" id="Qh4-F3-HTR"/>
+                            <constraint firstItem="G7x-22-xED" firstAttribute="top" secondItem="zA0-g7-I41" secondAttribute="bottom" constant="90" id="U6N-uJ-7wd"/>
+                            <constraint firstItem="G7x-22-xED" firstAttribute="centerX" secondItem="Hdy-gS-WDJ" secondAttribute="centerX" id="cjX-r8-y2Z"/>
+                            <constraint firstItem="PSv-ZP-imQ" firstAttribute="bottom" secondItem="G7x-22-xED" secondAttribute="bottom" constant="78" id="mun-Kh-6Yf"/>
+                            <constraint firstItem="zA0-g7-I41" firstAttribute="trailing" secondItem="PSv-ZP-imQ" secondAttribute="trailing" id="ywH-6h-mw3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PSv-ZP-imQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Share" id="yHi-Cc-UDu"/>
