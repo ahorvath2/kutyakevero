@@ -14,7 +14,13 @@ class PiecePageViewController: UIPageViewController {
             updatePages()
         }
     }
-    private var presentedIndex = 0
+    
+    var presentedIndexDidChange: ((Int) -> Void)?
+    private var presentedIndex = 0 {
+        didSet {
+            presentedIndexDidChange?(presentedIndex)
+        }
+    }
     private var pageViewControllers: [UIViewController] = []
 
     override func viewDidLoad() {
@@ -72,6 +78,7 @@ class PiecePageViewController: UIPageViewController {
 // MARK: - UIPageViewControllerDelegate
 extension PiecePageViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        
         guard let viewController = viewControllers?.first, let index = pageViewControllers.index(of: viewController) else { return }
         presentedIndex = index
     }
@@ -82,6 +89,7 @@ extension PiecePageViewController: UIPageViewControllerDelegate {
 extension PiecePageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+
         guard let presentedIndex = pageViewControllers.index(of: viewController) else { return nil }
         if presentedIndex == 0 {
             return nil
@@ -90,6 +98,7 @@ extension PiecePageViewController: UIPageViewControllerDataSource {
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+
         guard let presentedIndex = pageViewControllers.index(of: viewController)  else { return nil }
         if presentedIndex >= pageViewControllers.count - 1 {
             return nil

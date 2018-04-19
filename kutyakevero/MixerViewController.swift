@@ -16,7 +16,8 @@ class MixerViewController: UIViewController {
     @IBOutlet weak var headImageView: UIImageView!
     @IBOutlet weak var mouthImageView: UIImageView!
     @IBOutlet weak var eyeImageView: UIImageView!
-    
+    @IBOutlet weak var pieceSelector: UISegmentedControl!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,6 +63,25 @@ class MixerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Embedded pager" {
             pager = segue.destination as? PiecePageViewController
+            pager.presentedIndexDidChange = {[unowned self] (index: Int) in
+                guard let bodyPiece = BodyPiece(rawValue: self.pieceSelector.selectedSegmentIndex) else { return }
+                let imageName = bodyPiece.getImages()[index]
+                let imageView: UIImageView
+                switch (bodyPiece) {
+                case .ear:
+                    imageView = self.earImageView
+                case .mouth:
+                    imageView = self.mouthImageView
+                case .head:
+                    imageView = self.headImageView
+                case .body:
+                    imageView = self.bodyImageView
+                case .eye:
+                    imageView = self.eyeImageView
+                }
+                imageView.image = UIImage(named: imageName)
+
+            }
         } else if (segue.identifier == "Show sharing") {
             guard let sharingViewController = segue.destination as? ShareViewController else { return }
             sharingViewController.model = model

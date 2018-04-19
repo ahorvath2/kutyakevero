@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Di-JI-EQD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Di-JI-EQD">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -178,6 +178,7 @@
                         <outlet property="eyeImageView" destination="mWu-7g-c6S" id="QSf-Os-lk4"/>
                         <outlet property="headImageView" destination="885-ht-Y3s" id="l9J-Gl-zhp"/>
                         <outlet property="mouthImageView" destination="3ws-PJ-jBE" id="yT2-oH-c4i"/>
+                        <outlet property="pieceSelector" destination="a8W-Me-Qii" id="yle-iv-dPU"/>
                         <segue destination="2LS-Mc-97m" kind="presentation" identifier="Show onboarding" id="DvH-fC-sBT"/>
                     </connections>
                 </viewController>
@@ -347,7 +348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeD-0b-Xg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-604" y="1049"/>
+            <point key="canvasLocation" x="-585" y="1057"/>
         </scene>
         <!--Piece Page View Controller-->
         <scene sceneID="UaP-m6-J9J">
@@ -355,7 +356,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="m4u-1k-qWR" customClass="PiecePageViewController" customModule="kutyakevero" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9T-3t-Hkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-154" y="636"/>
+            <point key="canvasLocation" x="-113" y="736"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FG3-1U-nVO">

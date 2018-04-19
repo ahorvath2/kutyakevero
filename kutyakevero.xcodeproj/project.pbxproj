@@ -26,6 +26,7 @@
 		98A7C8481FE7C5F2001A20D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A7C8461FE7C5F2001A20D1 /* LaunchScreen.storyboard */; };
 		98A7C8851FE7FCA6001A20D1 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A7C8841FE7FCA6001A20D1 /* MainNavigationController.swift */; };
 		98A7C8871FE7FCD2001A20D1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A7C8861FE7FCD2001A20D1 /* OnboardingViewController.swift */; };
+		98F67BBF2085482D00C75FD0 /* AMATIC-SC.REGULAR.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 98F67BBE2085482C00C75FD0 /* AMATIC-SC.REGULAR.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		98A7C85F1FE7C5F2001A20D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98A7C8841FE7FCA6001A20D1 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		98A7C8861FE7FCD2001A20D1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		98F67BBE2085482C00C75FD0 /* AMATIC-SC.REGULAR.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AMATIC-SC.REGULAR.TTF"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		98A7C83C1FE7C5F2001A20D1 /* kutyakevero */ = {
 			isa = PBXGroup;
 			children = (
+				98F67BBD2085480A00C75FD0 /* resources */,
 				98A7C83D1FE7C5F2001A20D1 /* AppDelegate.swift */,
 				98A7C8411FE7C5F2001A20D1 /* Main.storyboard */,
 				98A7C8441FE7C5F2001A20D1 /* Assets.xcassets */,
@@ -176,6 +179,14 @@
 				98A7C85F1FE7C5F2001A20D1 /* Info.plist */,
 			);
 			path = kutyakeveroUITests;
+			sourceTree = "<group>";
+		};
+		98F67BBD2085480A00C75FD0 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				98F67BBE2085482C00C75FD0 /* AMATIC-SC.REGULAR.TTF */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 		9B140F01BE6B76A9F7C35A94 /* Pods */ = {
@@ -301,6 +312,7 @@
 				9856138F1FE80165009F1068 /* Localizable.strings in Resources */,
 				98A7C8481FE7C5F2001A20D1 /* LaunchScreen.storyboard in Resources */,
 				98A7C8451FE7C5F2001A20D1 /* Assets.xcassets in Resources */,
+				98F67BBF2085482D00C75FD0 /* AMATIC-SC.REGULAR.TTF in Resources */,
 				986DE4A01FE82799004DB288 /* PieceViewController.xib in Resources */,
 				98A7C8431FE7C5F2001A20D1 /* Main.storyboard in Resources */,
 			);
